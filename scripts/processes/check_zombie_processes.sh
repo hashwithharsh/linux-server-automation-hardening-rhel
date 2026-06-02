@@ -1,0 +1,2 @@
+#!/bin/bash
+ps aux | awk '$8=="Z"'
