@@ -1,2 +1,3 @@
 #!/bin/bash
-ss -tuln
+echo "=== Listening TCP/UDP sockets ==="
+ss -tulnp | column -t
