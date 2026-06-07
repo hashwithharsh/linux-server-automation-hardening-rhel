@@ -1,0 +1,7 @@
+[Unit]
+Description=Simple server health check
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/health_check.sh
