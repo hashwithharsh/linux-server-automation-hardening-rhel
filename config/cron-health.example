@@ -1,0 +1,2 @@
+# Example crontab entry
+# 0 */6 * * * /usr/local/bin/disk_usage.sh >> /var/log/health.log 2>&1
