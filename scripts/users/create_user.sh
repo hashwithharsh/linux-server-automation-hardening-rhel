@@ -4,6 +4,7 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 USERNAME="$1"
+# PASSWD="$2"
 if [ -z "$USERNAME" ]; then
   echo "Usage: $0 username"
   exit 1
@@ -14,4 +15,8 @@ if id "$USERNAME" >/dev/null 2>&1; then
 fi
 useradd -m -s /bin/bash "$USERNAME"
 passwd "$USERNAME"
+
+# Automatically set the second argument as password to the username.
+# echo "$USERNAME:$PASSWD" | chpasswd
+
 echo "User created: $USERNAME"
